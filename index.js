@@ -69,7 +69,7 @@ async function run() {
     // appointment get api
     app.get('/appointments', async function (req, res) {
       const email = req.query.email;
-      const date = new Date(req.query.date).toLocaleDateString();
+      const date = req.query.date;
 
       const query = { email: email, date: date };
       // console.log(query);s
